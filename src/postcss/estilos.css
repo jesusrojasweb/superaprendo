@@ -277,3 +277,81 @@ img{
 		}
 	}
 }
+/* --------------- Profesores ---------------*/
+.profesores{
+	background: var(--colorAzulFondo);
+	padding: 3em 0 5em;
+	& .title{
+		@apply --title;
+		color: white;
+
+	}
+	& .grid{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 3em;
+		margin-top: 2em;
+		& .item{
+			overflow: hidden;
+			border-radius: 5px;
+			& .header{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				position: relative;
+				& .perfil{
+					width: 50%;
+					clip-path: polygon(0 25%, 25% 0, 75% 0,100% 25%,50% 100%);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding: 1em;
+					background: var(--colorAzulFondo);
+					position: absolute;
+					bottom: -30%;
+				}
+				& .foto{
+					clip-path: polygon(0 25%, 25% 0, 75% 0,100% 25%,50% 100%);
+					    margin-top: -7px;
+
+				}
+			}
+			& .body{
+				background: white;
+				padding: 5em 2em 2em;
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				border-radius: 0 0 5px 5px;
+				& .profesor{
+					font-family: var(--fuenteP);
+					font-size: 1.5rem;
+					color: var(--colorTexto);
+					margin-top: 1em;
+				}
+				& .cargo{
+					margin: 1em 0;
+					color: var(--colorTexto);
+				}
+				& .btn{
+					@apply --btn;
+					background: var(--colorAzulFondo);
+					width: 60%;
+					opacity: 0;
+				}
+			}
+			&:hover{
+				& .body{
+					& .profesor{
+						margin-top: 0;
+					}
+					& .btn{
+						opacity: 1;
+						height: 100%;
+					}
+				}
+			}
+		}
+	}
+}
