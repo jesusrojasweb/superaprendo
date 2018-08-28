@@ -7,6 +7,7 @@ head
 	link(rel="stylesheet", href="css/fontawesome-all.min.css")
 	link(rel="stylesheet", href="css/estilos.css")
 body
+	// ------- Portada --------
 	section.portada
 		.margen
 			header.header
@@ -17,6 +18,7 @@ body
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore inventore eligendi nulla quibusdam mollitia consectetur ducimus illo cumque consequuntur.
 					a.btn(href="#") Entra a tu primera clase
 				.fondo
+	// ------- Como trabajamos --------
 	section.trabajamos
 		.margen
 			h2.title Como trabajamos
@@ -34,6 +36,7 @@ body
 				.item
 					img(src="img/hacer-trabao.png", alt="hacer el trabajo")
 					p.informacion Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+	// ------- Cursos --------
 	section.cursos
 		.margen
 			h2.title Encuentra el curso correcto para ti
@@ -134,6 +137,7 @@ body
 						h3.curso Desarrollo Web Online
 						p.descripcion
 						a.btn(href="#") Ir al curso
+	// ------- Objetivos --------
 	section.objetivos
 		.margen
 			h2.title Objetivos Principales
@@ -147,9 +151,10 @@ body
 					li.item
 						a(href="#") 3
 				.imagen
-					img(src="img/triste.jpg", alt="triste")
+					img(src="img/triste.png", alt="triste")
 				p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga pariatur omnis doloribus aspernatur, veniam mollitia, nam! Enim illum ab vel doloribus. Nesciunt, ex, ducimus.
 				a.btn(href="#") Ir a los cursos
+	// ------- Profesores --------
 	section.profesores
 		.margen
 			h2.title Conoce a tu profesores
@@ -157,7 +162,7 @@ body
 				.item
 					.header
 						.img
-							img.portada(src="", alt="")
+							img.portada(src="img/portada-capitan.jpg", alt="portada capitan")
 						.perfil
 							img.foto(src="img/perfil-01.jpg", alt="profesor 01")
 					.body
@@ -167,7 +172,7 @@ body
 				.item
 					.header
 						.img
-							img.portada(src="", alt="")
+							img.portada(src="img/portada-ironman.jpg", alt="portada ironman")
 						.perfil
 							img.foto(src="img/perfil-02.jpg", alt="profesor 02")
 					.body
@@ -177,13 +182,14 @@ body
 				.item
 					.header
 						.img
-							img.portada(src="", alt="")
+							img.portada(src="img/portada-scarlet.jpg", alt="portada scarlett")
 						.perfil
 							img.foto(src="img/perfil-03.jpg", alt="profesor 03")
 					.body
 						h3.profesor Scarlett Johansson
 						span.cargo Frontend Developer
 						a.btn(href="#") Ver perfil
+	// ------- Contacto --------
 	section.contacto
 		.margen
 			.grid
@@ -223,4 +229,16 @@ body
 						li.item
 							a(href="#")
 								span.fab.fa-youtube
-	
+	// ------- footer --------
+	footer.footer
+		ul.menu
+			li
+				a(href="#") Cursos
+			li
+				a(href="#") Profesores
+			li
+				a(href="#") Blog
+			li
+				a(href="#") Información
+			li
+				a(href="#") Donación
