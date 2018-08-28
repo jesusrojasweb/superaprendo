@@ -464,3 +464,20 @@ img{
 		}
 	}
 }
+.footer{
+	background: var(--colorAmarillo);
+	padding: 3em 0;
+	& .menu{
+		list-style: none;
+		display: flex;
+		& .item{
+			margin-right: 1em;
+			& a{
+				color: var(--colorTexto);
+				text-transform: uppercase;
+				text-decoration: none;
+				font-weight: bold;
+			}
+		}
+	}
+}
