@@ -150,3 +150,67 @@ img{
 		}
 	}
 }
+/* --------------- Cursos ---------------*/
+.cursos{
+	background: var(--colorAzulFondo);
+	padding: 5em 0;
+	& .title{
+		color: white;
+		font-family: var(--fuenteP);
+		text-transform: uppercase;
+	}
+	& .menu{
+		margin: 4em 0 0;
+		& .item{
+			list-style: none;
+			& a{
+				@apply --btn;
+				background: none;
+				border: 1px solid white;
+			}
+		}
+	}
+	& .grid{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		margin-top: 5em;
+		overflow: hidden;
+		border-radius: 5px;
+		& .item{
+			position: relative;
+			overflow: hidden;
+			text-decoration: none;
+			color: white;
+			& .hover{
+				position: absolute;
+				bottom: -30%;
+				background: color(black a(50%));
+				padding: 2em 1em 4em;
+				& .curso, & .descripcion{
+					color: white;
+				}
+				& .descripcion{
+					margin-bottom: 2em;
+					opacity: 0;
+				}
+				& .btn{
+					@apply --btn;
+					padding: .5em 1em;
+					opacity: 0;
+				}
+			}
+			&:hover{
+				& .hover{
+					background: color(white a(70%));
+					bottom: 0;
+					& .curso, & .descripcion{
+						color: var(--colorTexto);
+					}
+					& .descripcion, & .btn{
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}
