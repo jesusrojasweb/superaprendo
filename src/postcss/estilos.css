@@ -214,3 +214,66 @@ img{
 		}
 	}
 }
+/* --------------- Objetivos ---------------*/
+.objetivos{
+	background: var(--colorAmarillo);
+	padding: 5em 0;
+	height: 110vh;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	& .title{
+		text-align: center;
+		@apply --title;
+		color: var(--colorTexto);
+	}
+	& .objetivo{
+		margin: 3em auto 0;
+		display: grid;
+		width: 50%;
+		grid-template-columns: 2fr 1fr;
+		grid-template-areas: "numero menu"
+							 "descripcion imagen"
+							 "boton imagen";
+		& .numero{
+			grid-area: numero;
+			font-family: var(--fuenteP);
+			color: var(--colorAzulFondo);
+			font-size: 5rem;
+		}
+		& .menu{
+			grid-area: menu;
+			list-style: none;
+			display: flex;
+			& .item{
+				margin: 0 .5em;
+				& a{
+					color: white;
+					background: var(--colorAzulFondo);
+					border-radius: 50%;
+					text-decoration: none;
+					font-weight: bold;
+					padding: .2em .7em;
+					font-size: 1.5rem;
+				}
+			}
+		}
+		& .imagen{
+			grid-area: imagen;
+			grid-row-start: 1;
+			margin-top: 3em;
+		}
+		& .descripcion{
+			grid-area: descripcion;
+			color: var(--colorTexto);
+		}
+		& .boton{
+			grid-area: boton;
+			& .btn{
+				@apply --btn;
+				
+			}
+		}
+	}
+}
