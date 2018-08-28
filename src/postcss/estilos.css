@@ -117,3 +117,36 @@ img{
 		}
 	}
 }
+/* --------------- Como trabajamos ---------------*/
+.trabajamos{
+	background: var(--colorRojoFondo);
+	text-align: center;
+	padding: 6em 0;
+	height: 110vh;
+	box-sizing: border-box;
+	& .title{
+		color: white;
+		font-family: var(--fuenteP);
+		text-transform: uppercase;
+	}
+	& .descripcion{
+		color: white;
+		width: 80%;
+	}
+	& .grid{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 4em;
+		margin-top: 5em;
+		& img{
+			width: 100%;
+		}
+		& .item{
+			display: grid;
+			& .informacion{
+				align-self: end;
+				color: white;
+			}
+		}
+	}
+}
