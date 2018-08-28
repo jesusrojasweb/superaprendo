@@ -355,3 +355,112 @@ img{
 		}
 	}
 }
+/* --------------- Contacto ---------------*/
+.contacto{
+	background: var(--colorRojoFondo);
+	padding: 5em 0;
+	& .grid{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		border-radius: 5px;
+		overflow: hidden;
+		& > .item{
+			background: white;
+			padding: 3em 4em;
+			position: relative;
+			& .triangulo{
+				width: 30%;
+				height: 25%;
+				background: var(--colorAmarillo);
+				position: absolute;
+				top: 0;
+				left: 0;
+				clip-path: polygon(0 0, 100% 0,35% 100%, 0 50%);
+				z-index: 20;
+			}
+			& .titulo{
+				display: flex;
+				justify-content: flex-end;
+				background: #d0e2f5;
+				position: absolute;
+				width: 100%;
+				left: 0;
+				padding-right: 4em;
+				box-sizing: border-box;
+				height: 40%;
+				top: 0;
+				clip-path: polygon(0 0, 100% 0,100% 100%,0 25%);
+				& .title{
+					@apply --title;
+					margin-top: 2em;
+				}
+			}
+			& .formulario{
+				display: flex;
+				flex-direction: column;
+				margin-top: 7em;
+				z-index: 1000;
+				& .input, & .textarea{
+					font-family: var(--fuenteS);
+					font-size: 1rem;
+					border: none;
+					border-bottom: 1px solid var(--colorTexto);
+					margin-bottom: 1em;
+					padding: .5em;
+					&::placeholder{
+						color: var(--colorTexto);
+					}
+					&:focus{
+						outline: none;
+						color: var(--colorAzulFondo);
+						border-color: var(--colorAzulFondo);
+					}
+				}
+				& .btn{
+					@apply --btn;
+					border: none;
+					font-family: var(--fuenteS);
+					width: 25%;
+					background: var(--colorAzulFondo);
+				}
+			}
+			&:nth-of-type(2){
+				background: var(--colorAzulFondo);
+				& .title{
+					@apply --title;
+				}
+				& .descripcion{
+					color: white;
+				}
+				& .datos{
+					list-style: none;
+					color: white;
+					& .item{
+						& .icono{
+							font-size: 1.4rem;
+							margin: 0 1em 1em 0;
+						}
+					}
+				}
+				& .social{
+					display: flex;
+					list-style: none;
+					margin-top: 2em;
+					& .item{
+						margin-right: 1em;
+						& a{
+							font-size: 1.5rem;
+							color: var(--colorAzulFondo);
+							background: white;
+							padding: .5em 1.5em 1em;
+							clip-path: polygon(0 25%, 25% 0, 75% 0,100% 25%,50% 100%);
+							& span{
+								margin-bottom: 1em;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
