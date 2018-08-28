@@ -1,0 +1,119 @@
+:root{
+	--fuenteP: 'M PLUS Rounded 1c', system-ui;
+	--fuenteS: 'Montserrat', system-ui;
+
+	--colorTexto: #105398;
+	--colorRojoFondo: #e58097;
+	--colorAzulFondo: #156fcb;
+	--colorAmarillo: #fef467;
+	--colorRojo: #f72139;
+
+	--title: {
+		color: white;
+		font-family: var(--fuenteP);
+		text-transform: uppercase;
+	};
+	--btn: {
+		text-decoration: none;
+		text-transform: uppercase;
+		color: white;
+		background: var(--colorRojo);
+		border-radius: 5px;
+		padding: 1em;
+		font-weight: bold;
+	};
+};
+*{
+	transition: .3s;
+}
+body{
+	font-family: var(--fuenteP);
+	font-family: var(--fuenteS);
+	margin: 0;
+	padding: 0;
+}
+h1,h2,h3,h4,h5,figure,ul{
+	margin: 0;
+	padding: 0;
+}
+img{
+	width: 100%;
+	vertical-align: top;
+}
+.margen{
+	margin: 0 5em;
+}
+/* --------------- Portada ---------------*/
+.portada{
+	display: flex;
+	& .header{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: absolute;
+		top: 2em;
+		margin: 0 5em;
+		z-index: 10;
+		& .logo{
+			width: 15%;
+			& img{
+				width: 100%;
+			}
+		}
+		& .menu{
+			display: flex;
+			list-style: none;
+			& .item{
+				margin: 0 1em;
+				& a{
+					color: var(--colorAmarillo);
+					font-weight: bold;
+					text-transform: uppercase;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	& .margen{
+		margin-right: 0;
+	}
+	& .grid{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		height: 100vh;
+		& .copy{
+			padding: 2em 5em 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			& .title{
+				color: var(--colorTexto);
+				font-size: 3rem;
+				font-family: var(--fuenteP);
+			}
+			& .descripcion{
+				color: var(--colorTexto);
+				margin-top: 2em;
+				margin-bottom: 3em;
+			}
+			& .btn{
+				@apply --btn;
+			}
+		}
+		& .fondo{
+			background: url('../img/fondo.png') center center no-repeat;
+			background-size: cover;
+			width: 100%;
+			height: 100%;
+			position: relative;
+			& .over{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: color(var(--colorAzulFondo) a(30%));
+			}
+		}
+	}
+}

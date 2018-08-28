@@ -6,18 +6,32 @@ head
 	meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
 	link(rel="stylesheet", href="css/fontawesome-all.min.css")
 	link(rel="stylesheet", href="css/estilos.css")
+	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:800" rel="stylesheet">
 body
 	// ------- Portada --------
 	section.portada
-		.margen
-			header.header
-				figure.logo
-					img.imagen(src="img/logo.png", alt="fondo")
-				.copy
+		header.header
+			figure.logo
+				img.imagen(src="img/logo.png", alt="fondo")
+			ul.menu
+				li.item
+					a(href="#") Cursos
+				li.item
+					a(href="#") Profesores
+				li.item
+					a(href="#") Blog
+				li.item
+					a(href="#") Información
+				li.item
+					a(href="#") Donación
+		.grid
+			.copy
+				.contenedor
 					h1.title Aprendo con tus personajes favoritos
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore inventore eligendi nulla quibusdam mollitia consectetur ducimus illo cumque consequuntur.
+					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore inventore eligendi nulla quibusdam mollitia consectetur ducimus illo cumque consequuntur.
 					a.btn(href="#") Entra a tu primera clase
-				.fondo
+			.fondo
+				.over
 	// ------- Como trabajamos --------
 	section.trabajamos
 		.margen
@@ -41,101 +55,104 @@ body
 		.margen
 			h2.title Encuentra el curso correcto para ti
 			ul.menu
-				li
+				li.item
 					a(href="#") Aplicar ahora
 			.grid
 				.item
 					img(src="img/curso-01.jpg", alt="curso 01")
 					.hover
 						h3.curso Desarrollo Web Online
-						p.descripcion
+						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, ipsam.
 						a.btn(href="#") Ir al curso
 				.item
 					img(src="img/curso-02.jpg", alt="curso 02")
 					.hover
 						h3.curso Desarrollo Web Online
-						p.descripcion
+						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, autem.
 						a.btn(href="#") Ir al curso
 				.item
 					img(src="img/curso-03.jpg", alt="curso 03")
 					.hover
 						h3.curso Desarrollo Web Online
-						p.descripcion
+						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, quod.
 						a.btn(href="#") Ir al curso
 				.item
 					img(src="img/curso-04.jpg", alt="curso 04")
 					.hover
 						h3.curso Desarrollo Web Online
-						p.descripcion
+						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, quos.
 						a.btn(href="#") Ir al curso
+				.item
 					img(src="img/curso-01.jpg", alt="curso 01")
 					.hover
 						h3.curso Desarrollo Web Online
-						p.descripcion
+						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, tempora.
 						a.btn(href="#") Ir al curso
 				.item
 					img(src="img/curso-02.jpg", alt="curso 02")
 					.hover
 						h3.curso Desarrollo Web Online
-						p.descripcion
+						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dignissimos.
 						a.btn(href="#") Ir al curso
 				.item
 					img(src="img/curso-03.jpg", alt="curso 03")
 					.hover
 						h3.curso Desarrollo Web Online
-						p.descripcion
+						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, eveniet.
 						a.btn(href="#") Ir al curso
 				.item
 					img(src="img/curso-04.jpg", alt="curso 04")
 					.hover
 						h3.curso Desarrollo Web Online
-						p.descripcion
+						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, quia?
 						a.btn(href="#") Ir al curso
+				.item
 					img(src="img/curso-01.jpg", alt="curso 01")
 					.hover
 						h3.curso Desarrollo Web Online
-						p.descripcion
+						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, quasi!
 						a.btn(href="#") Ir al curso
 				.item
 					img(src="img/curso-02.jpg", alt="curso 02")
 					.hover
 						h3.curso Desarrollo Web Online
-						p.descripcion
+						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, dolor.
 						a.btn(href="#") Ir al curso
 				.item
 					img(src="img/curso-03.jpg", alt="curso 03")
 					.hover
 						h3.curso Desarrollo Web Online
-						p.descripcion
+						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, sunt!
 						a.btn(href="#") Ir al curso
 				.item
 					img(src="img/curso-04.jpg", alt="curso 04")
 					.hover
 						h3.curso Desarrollo Web Online
-						p.descripcion
+						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, eaque!
 						a.btn(href="#") Ir al curso
+				.item
 					img(src="img/curso-01.jpg", alt="curso 01")
 					.hover
 						h3.curso Desarrollo Web Online
-						p.descripcion
+						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, eius.
 						a.btn(href="#") Ir al curso
 				.item
 					img(src="img/curso-02.jpg", alt="curso 02")
 					.hover
 						h3.curso Desarrollo Web Online
-						p.descripcion
+						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, cumque.
 						a.btn(href="#") Ir al curso
 				.item
 					img(src="img/curso-03.jpg", alt="curso 03")
 					.hover
 						h3.curso Desarrollo Web Online
-						p.descripcion
+						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, nemo.
 						a.btn(href="#") Ir al curso
 				.item
 					img(src="img/curso-04.jpg", alt="curso 04")
 					.hover
 						h3.curso Desarrollo Web Online
-						p.descripcion
+						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, delectus.
 						a.btn(href="#") Ir al curso
 	// ------- Objetivos --------
 	section.objetivos
@@ -153,7 +170,8 @@ body
 				.imagen
 					img(src="img/triste.png", alt="triste")
 				p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga pariatur omnis doloribus aspernatur, veniam mollitia, nam! Enim illum ab vel doloribus. Nesciunt, ex, ducimus.
-				a.btn(href="#") Ir a los cursos
+				.boton
+					a.btn(href="#") Ir a los cursos
 	// ------- Profesores --------
 	section.profesores
 		.margen
@@ -201,20 +219,20 @@ body
 						input#nombre.input(type="text", name="nombre",placeholder="Nombre")
 						input#correo.input(type="email", name="correo", placeholder="Correo")
 						input#correo.input(type="text", name="Asunto", placeholder="Asunto")
-						textarea#mensae.textarea(name="mensaje", cols="30", rows="10",placeholder="Mensaje")
-						input(type="submit", value="Enviar")
+						textarea#mensae.textarea(name="mensaje", cols="30", rows="5",placeholder="Mensaje")
+						input(type="submit", value="Enviar").btn
 				.item
 					h2.title Más Información
 					p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae quae neque ullam hic, totam nemo explicabo esse tempora, mollitia voluptatem illum rem earum, itaque porro animi expedita quia. Beatae, nulla.
 					ul.datos
 						li.item
-							span.fas.fa-phone
+							span.fas.fa-phone.icono
 							span.info 0424-1234567
 						li.item
-							span.fas.fa-envelope
+							span.fas.fa-envelope.icono
 							span.info superaprendo@gmail.com
 						li.item
-							span.fas.fa-map-marker-alt
+							span.fas.fa-map-marker-alt.icono
 							span.info Monagas Maturín Av Bolivar
 					ul.social
 						li.item
@@ -231,14 +249,15 @@ body
 								span.fab.fa-youtube
 	// ------- footer --------
 	footer.footer
-		ul.menu
-			li
-				a(href="#") Cursos
-			li
-				a(href="#") Profesores
-			li
-				a(href="#") Blog
-			li
-				a(href="#") Información
-			li
-				a(href="#") Donación
+		.margen
+			ul.menu
+				li.item
+					a(href="#") Cursos
+				li.item
+					a(href="#") Profesores
+				li.item
+					a(href="#") Blog
+				li.item
+					a(href="#") Información
+				li.item
+					a(href="#") Donación
