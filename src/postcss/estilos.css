@@ -1,0 +1,483 @@
+:root{
+	--fuenteP: 'M PLUS Rounded 1c', system-ui;
+	--fuenteS: 'Montserrat', system-ui;
+
+	--colorTexto: #105398;
+	--colorRojoFondo: #e58097;
+	--colorAzulFondo: #156fcb;
+	--colorAmarillo: #fef467;
+	--colorRojo: #f72139;
+
+	--title: {
+		color: white;
+		font-family: var(--fuenteP);
+		text-transform: uppercase;
+	};
+	--btn: {
+		text-decoration: none;
+		text-transform: uppercase;
+		color: white;
+		background: var(--colorRojo);
+		border-radius: 5px;
+		padding: 1em;
+		font-weight: bold;
+	};
+};
+*{
+	transition: .3s;
+}
+body{
+	font-family: var(--fuenteP);
+	font-family: var(--fuenteS);
+	margin: 0;
+	padding: 0;
+}
+h1,h2,h3,h4,h5,figure,ul{
+	margin: 0;
+	padding: 0;
+}
+img{
+	width: 100%;
+	vertical-align: top;
+}
+.margen{
+	margin: 0 5em;
+}
+/* --------------- Portada ---------------*/
+.portada{
+	display: flex;
+	& .header{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: absolute;
+		top: 2em;
+		margin: 0 5em;
+		z-index: 10;
+		& .logo{
+			width: 15%;
+			& img{
+				width: 100%;
+			}
+		}
+		& .menu{
+			display: flex;
+			list-style: none;
+			& .item{
+				margin: 0 1em;
+				& a{
+					color: var(--colorAmarillo);
+					font-weight: bold;
+					text-transform: uppercase;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	& .margen{
+		margin-right: 0;
+	}
+	& .grid{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		height: 100vh;
+		& .copy{
+			padding: 2em 5em 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			& .title{
+				color: var(--colorTexto);
+				font-size: 3rem;
+				font-family: var(--fuenteP);
+			}
+			& .descripcion{
+				color: var(--colorTexto);
+				margin-top: 2em;
+				margin-bottom: 3em;
+			}
+			& .btn{
+				@apply --btn;
+			}
+		}
+		& .fondo{
+			background: url('../img/fondo.png') center center no-repeat;
+			background-size: cover;
+			width: 100%;
+			height: 100%;
+			position: relative;
+			& .over{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: color(var(--colorAzulFondo) a(30%));
+			}
+		}
+	}
+}
+/* --------------- Como trabajamos ---------------*/
+.trabajamos{
+	background: var(--colorRojoFondo);
+	text-align: center;
+	padding: 6em 0;
+	height: 110vh;
+	box-sizing: border-box;
+	& .title{
+		color: white;
+		font-family: var(--fuenteP);
+		text-transform: uppercase;
+	}
+	& .descripcion{
+		color: white;
+		width: 80%;
+	}
+	& .grid{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 4em;
+		margin-top: 5em;
+		& img{
+			width: 100%;
+		}
+		& .item{
+			display: grid;
+			& .informacion{
+				align-self: end;
+				color: white;
+			}
+		}
+	}
+}
+/* --------------- Cursos ---------------*/
+.cursos{
+	background: var(--colorAzulFondo);
+	padding: 5em 0;
+	& .title{
+		color: white;
+		font-family: var(--fuenteP);
+		text-transform: uppercase;
+	}
+	& .menu{
+		margin: 4em 0 0;
+		& .item{
+			list-style: none;
+			& a{
+				@apply --btn;
+				background: none;
+				border: 1px solid white;
+			}
+		}
+	}
+	& .grid{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		margin-top: 5em;
+		overflow: hidden;
+		border-radius: 5px;
+		& .item{
+			position: relative;
+			overflow: hidden;
+			text-decoration: none;
+			color: white;
+			& .hover{
+				position: absolute;
+				bottom: -30%;
+				background: color(black a(50%));
+				padding: 2em 1em 4em;
+				& .curso, & .descripcion{
+					color: white;
+				}
+				& .descripcion{
+					margin-bottom: 2em;
+					opacity: 0;
+				}
+				& .btn{
+					@apply --btn;
+					padding: .5em 1em;
+					opacity: 0;
+				}
+			}
+			&:hover{
+				& .hover{
+					background: color(white a(70%));
+					bottom: 0;
+					& .curso, & .descripcion{
+						color: var(--colorTexto);
+					}
+					& .descripcion, & .btn{
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}
+/* --------------- Objetivos ---------------*/
+.objetivos{
+	background: var(--colorAmarillo);
+	padding: 5em 0;
+	height: 110vh;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	& .title{
+		text-align: center;
+		@apply --title;
+		color: var(--colorTexto);
+	}
+	& .objetivo{
+		margin: 3em auto 0;
+		display: grid;
+		width: 50%;
+		grid-template-columns: 2fr 1fr;
+		grid-template-areas: "numero menu"
+							 "descripcion imagen"
+							 "boton imagen";
+		& .numero{
+			grid-area: numero;
+			font-family: var(--fuenteP);
+			color: var(--colorAzulFondo);
+			font-size: 5rem;
+		}
+		& .menu{
+			grid-area: menu;
+			list-style: none;
+			display: flex;
+			& .item{
+				margin: 0 .5em;
+				& a{
+					color: white;
+					background: var(--colorAzulFondo);
+					border-radius: 50%;
+					text-decoration: none;
+					font-weight: bold;
+					padding: .2em .7em;
+					font-size: 1.5rem;
+				}
+			}
+		}
+		& .imagen{
+			grid-area: imagen;
+			grid-row-start: 1;
+			margin-top: 3em;
+		}
+		& .descripcion{
+			grid-area: descripcion;
+			color: var(--colorTexto);
+		}
+		& .boton{
+			grid-area: boton;
+			& .btn{
+				@apply --btn;
+				
+			}
+		}
+	}
+}
+/* --------------- Profesores ---------------*/
+.profesores{
+	background: var(--colorAzulFondo);
+	padding: 3em 0 5em;
+	& .title{
+		@apply --title;
+		color: white;
+
+	}
+	& .grid{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 3em;
+		margin-top: 2em;
+		& .item{
+			overflow: hidden;
+			border-radius: 5px;
+			& .header{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				position: relative;
+				& .perfil{
+					width: 50%;
+					clip-path: polygon(0 25%, 25% 0, 75% 0,100% 25%,50% 100%);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding: 1em;
+					background: var(--colorAzulFondo);
+					position: absolute;
+					bottom: -30%;
+				}
+				& .foto{
+					clip-path: polygon(0 25%, 25% 0, 75% 0,100% 25%,50% 100%);
+					    margin-top: -7px;
+
+				}
+			}
+			& .body{
+				background: white;
+				padding: 5em 2em 2em;
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				border-radius: 0 0 5px 5px;
+				& .profesor{
+					font-family: var(--fuenteP);
+					font-size: 1.5rem;
+					color: var(--colorTexto);
+					margin-top: 1em;
+				}
+				& .cargo{
+					margin: 1em 0;
+					color: var(--colorTexto);
+				}
+				& .btn{
+					@apply --btn;
+					background: var(--colorAzulFondo);
+					width: 60%;
+					opacity: 0;
+				}
+			}
+			&:hover{
+				& .body{
+					& .profesor{
+						margin-top: 0;
+					}
+					& .btn{
+						opacity: 1;
+						height: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+/* --------------- Contacto ---------------*/
+.contacto{
+	background: var(--colorRojoFondo);
+	padding: 5em 0;
+	& .grid{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		border-radius: 5px;
+		overflow: hidden;
+		& > .item{
+			background: white;
+			padding: 3em 4em;
+			position: relative;
+			& .triangulo{
+				width: 30%;
+				height: 25%;
+				background: var(--colorAmarillo);
+				position: absolute;
+				top: 0;
+				left: 0;
+				clip-path: polygon(0 0, 100% 0,35% 100%, 0 50%);
+				z-index: 20;
+			}
+			& .titulo{
+				display: flex;
+				justify-content: flex-end;
+				background: #d0e2f5;
+				position: absolute;
+				width: 100%;
+				left: 0;
+				padding-right: 4em;
+				box-sizing: border-box;
+				height: 40%;
+				top: 0;
+				clip-path: polygon(0 0, 100% 0,100% 100%,0 25%);
+				& .title{
+					@apply --title;
+					margin-top: 2em;
+				}
+			}
+			& .formulario{
+				display: flex;
+				flex-direction: column;
+				margin-top: 7em;
+				z-index: 1000;
+				& .input, & .textarea{
+					font-family: var(--fuenteS);
+					font-size: 1rem;
+					border: none;
+					border-bottom: 1px solid var(--colorTexto);
+					margin-bottom: 1em;
+					padding: .5em;
+					&::placeholder{
+						color: var(--colorTexto);
+					}
+					&:focus{
+						outline: none;
+						color: var(--colorAzulFondo);
+						border-color: var(--colorAzulFondo);
+					}
+				}
+				& .btn{
+					@apply --btn;
+					border: none;
+					font-family: var(--fuenteS);
+					width: 25%;
+					background: var(--colorAzulFondo);
+				}
+			}
+			&:nth-of-type(2){
+				background: var(--colorAzulFondo);
+				& .title{
+					@apply --title;
+				}
+				& .descripcion{
+					color: white;
+				}
+				& .datos{
+					list-style: none;
+					color: white;
+					& .item{
+						& .icono{
+							font-size: 1.4rem;
+							margin: 0 1em 1em 0;
+						}
+					}
+				}
+				& .social{
+					display: flex;
+					list-style: none;
+					margin-top: 2em;
+					& .item{
+						margin-right: 1em;
+						& a{
+							font-size: 1.5rem;
+							color: var(--colorAzulFondo);
+							background: white;
+							padding: .5em 1.5em 1em;
+							clip-path: polygon(0 25%, 25% 0, 75% 0,100% 25%,50% 100%);
+							& span{
+								margin-bottom: 1em;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.footer{
+	background: var(--colorAmarillo);
+	padding: 3em 0;
+	& .menu{
+		list-style: none;
+		display: flex;
+		& .item{
+			margin-right: 1em;
+			& a{
+				color: var(--colorTexto);
+				text-transform: uppercase;
+				text-decoration: none;
+				font-weight: bold;
+			}
+		}
+	}
+}
