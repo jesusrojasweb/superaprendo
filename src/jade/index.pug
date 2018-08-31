@@ -8,12 +8,10 @@ head
 	link(rel="stylesheet", href="css/estilos.css")
 	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:800" rel="stylesheet">
 body
-	// ------- Portada --------
-	section.portada
-		header.header
-			figure.logo
-				img.imagen(src="img/logo.png", alt="fondo")
-			ul.menu
+	.container
+		// ------- Portada --------
+		section.portada.animacion
+			//ul.menu
 				li.item
 					a(href="#") Cursos
 				li.item
@@ -24,240 +22,162 @@ body
 					a(href="#") Información
 				li.item
 					a(href="#") Donación
-		.grid
-			.copy
-				.contenedor
-					h1.title Aprendo con tus personajes favoritos
-					p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore inventore eligendi nulla quibusdam mollitia consectetur ducimus illo cumque consequuntur.
-					a.btn(href="#") Entra a tu primera clase
-			.fondo
-				.over
-	// ------- Como trabajamos --------
-	section.trabajamos
-		.margen
-			h2.title Como trabajamos
-			p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima corporis natus facilis molestias totam eligendi repudiandae nostrum? Incidunt dicta quibusdam, repudiandae, molestiae quos esse quia, nobis culpa quo ex nam natus aperiam! Dolore temporibus atque, ipsa.
 			.grid
-				.item
-					img(src="img/ver-clase.png", alt="ver clase")
-					p.informacion Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-				.item
-					img(src="img/certificado.png", alt="certificado")
-					p.informacion Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-				.item
-					img(src="img/contacto-empresa.png", alt="contacto empresa")
-					p.informacion Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-				.item
-					img(src="img/hacer-trabao.png", alt="hacer el trabajo")
-					p.informacion Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-	// ------- Cursos --------
-	section.cursos
-		.margen
-			h2.title Encuentra el curso correcto para ti
-			ul.menu
-				li.item
-					a(href="#") Aplicar ahora
-			.grid
-				.item
-					img(src="img/curso-01.jpg", alt="curso 01")
-					.hover
-						h3.curso Desarrollo Web Online
-						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, ipsam.
-						a.btn(href="#") Ir al curso
-				.item
-					img(src="img/curso-02.jpg", alt="curso 02")
-					.hover
-						h3.curso Desarrollo Web Online
-						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, autem.
-						a.btn(href="#") Ir al curso
-				.item
-					img(src="img/curso-03.jpg", alt="curso 03")
-					.hover
-						h3.curso Desarrollo Web Online
-						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, quod.
-						a.btn(href="#") Ir al curso
-				.item
-					img(src="img/curso-04.jpg", alt="curso 04")
-					.hover
-						h3.curso Desarrollo Web Online
-						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, quos.
-						a.btn(href="#") Ir al curso
-				.item
-					img(src="img/curso-01.jpg", alt="curso 01")
-					.hover
-						h3.curso Desarrollo Web Online
-						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, tempora.
-						a.btn(href="#") Ir al curso
-				.item
-					img(src="img/curso-02.jpg", alt="curso 02")
-					.hover
-						h3.curso Desarrollo Web Online
-						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dignissimos.
-						a.btn(href="#") Ir al curso
-				.item
-					img(src="img/curso-03.jpg", alt="curso 03")
-					.hover
-						h3.curso Desarrollo Web Online
-						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, eveniet.
-						a.btn(href="#") Ir al curso
-				.item
-					img(src="img/curso-04.jpg", alt="curso 04")
-					.hover
-						h3.curso Desarrollo Web Online
-						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, quia?
-						a.btn(href="#") Ir al curso
-				.item
-					img(src="img/curso-01.jpg", alt="curso 01")
-					.hover
-						h3.curso Desarrollo Web Online
-						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, quasi!
-						a.btn(href="#") Ir al curso
-				.item
-					img(src="img/curso-02.jpg", alt="curso 02")
-					.hover
-						h3.curso Desarrollo Web Online
-						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, dolor.
-						a.btn(href="#") Ir al curso
-				.item
-					img(src="img/curso-03.jpg", alt="curso 03")
-					.hover
-						h3.curso Desarrollo Web Online
-						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, sunt!
-						a.btn(href="#") Ir al curso
-				.item
-					img(src="img/curso-04.jpg", alt="curso 04")
-					.hover
-						h3.curso Desarrollo Web Online
-						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, eaque!
-						a.btn(href="#") Ir al curso
-				.item
-					img(src="img/curso-01.jpg", alt="curso 01")
-					.hover
-						h3.curso Desarrollo Web Online
-						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, eius.
-						a.btn(href="#") Ir al curso
-				.item
-					img(src="img/curso-02.jpg", alt="curso 02")
-					.hover
-						h3.curso Desarrollo Web Online
-						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, cumque.
-						a.btn(href="#") Ir al curso
-				.item
-					img(src="img/curso-03.jpg", alt="curso 03")
-					.hover
-						h3.curso Desarrollo Web Online
-						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, nemo.
-						a.btn(href="#") Ir al curso
-				.item
-					img(src="img/curso-04.jpg", alt="curso 04")
-					.hover
-						h3.curso Desarrollo Web Online
-						p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, delectus.
-						a.btn(href="#") Ir al curso
-	// ------- Objetivos --------
-	section.objetivos
-		.margen
-			h2.title Objetivos Principales
-			.objetivo
-				span.numero 01
+				.copy
+					header.header
+						figure.logo
+							img.imagen(src="img/logo.png", alt="fondo")
+					.contenedor
+						h1.title Aprendo con tus personajes favoritos
+						p.descripcion Fórmate con tus personajes favoritos de videojuegos y del cine. Con lo aprendido obtendrás trabajo de las mejores empresas de tecnología. Además es completamente gratis. ¿Qué esperas para empezar?
+						a.btn(href="#") Entra a tu primera clase
+				.fondo
+					.over
+		// ------- Como trabajamos --------
+		section.trabajamos.animacion
+			.margen
+				h2.title Como trabajamos
+				p.descripcion Aquí en SuperAprendo, queremos que tengas la mejor experiencia de todas. Estas seran algunas cosas que podrás realizar en nuestra plataforma.
+				.grid
+					.item
+						img(src="img/ver-clase.png", alt="ver clase")
+						p.informacion Podrás ver las clases de tus cursos favoritos donde quieras y cuando quieras.
+					.item
+						img(src="img/certificado.png", alt="certificado")
+						p.informacion Al terminar el curso, realizaras un examen para otorgarte un certificado.
+					.item
+						img(src="img/contacto-empresa.png", alt="contacto empresa")
+						p.informacion Podrás contactar con empresas que requieran de las habilidades que adquiriste.
+					.item
+						img(src="img/hacer-trabao.png", alt="hacer el trabajo")
+						p.informacion Al final tus servicios serán remunerados después te terminar tu labor con la empresa.
+		// ------- Cursos --------
+		section.cursos.animacion
+			.margen
+				h2.title Encuentra el curso correcto para ti
 				ul.menu
 					li.item
-						a(href="#") 1
-					li.item
-						a(href="#") 2
-					li.item
-						a(href="#") 3
-				.imagen
-					img(src="img/triste.png", alt="triste")
-				p.descripcion Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga pariatur omnis doloribus aspernatur, veniam mollitia, nam! Enim illum ab vel doloribus. Nesciunt, ex, ducimus.
-				.boton
-					a.btn(href="#") Ir a los cursos
-	// ------- Profesores --------
-	section.profesores
-		.margen
-			h2.title Conoce a tu profesores
-			.grid
-				.item
-					.header
-						.img
-							img.portada(src="img/portada-capitan.jpg", alt="portada capitan")
-						.perfil
-							img.foto(src="img/perfil-01.jpg", alt="profesor 01")
-					.body
-						h3.profesor Chris Evans
-						span.cargo Frontend Developer
-						a.btn(href="#") Ver perfil
-				.item
-					.header
-						.img
-							img.portada(src="img/portada-ironman.jpg", alt="portada ironman")
-						.perfil
-							img.foto(src="img/perfil-02.jpg", alt="profesor 02")
-					.body
-						h3.profesor Robert Dawney Jr.
-						span.cargo Frontend Developer
-						a.btn(href="#") Ver perfil
-				.item
-					.header
-						.img
-							img.portada(src="img/portada-scarlet.jpg", alt="portada scarlett")
-						.perfil
-							img.foto(src="img/perfil-03.jpg", alt="profesor 03")
-					.body
-						h3.profesor Scarlett Johansson
-						span.cargo Frontend Developer
-						a.btn(href="#") Ver perfil
-	// ------- Contacto --------
-	section.contacto
-		.margen
-			.grid
-				.item
-					.triangulo
-					.titulo
-						h2.title Contactanos
-					form.formulario
-						input#nombre.input(type="text", name="nombre",placeholder="Nombre")
-						input#correo.input(type="email", name="correo", placeholder="Correo")
-						input#correo.input(type="text", name="Asunto", placeholder="Asunto")
-						textarea#mensae.textarea(name="mensaje", cols="30", rows="5",placeholder="Mensaje")
-						input(type="submit", value="Enviar").btn
-				.item
-					h2.title Más Información
-					p.descripcion  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae quae neque ullam hic, totam nemo explicabo esse tempora, mollitia voluptatem illum rem earum, itaque porro animi expedita quia. Beatae, nulla.
-					ul.datos
+						a(href="#") Aplicar ahora
+				.grid
+					.item
+						img(src="img/curso-01.jpg", alt="curso 01")
+						.hover
+							h3.curso Desarrollo Web Online
+							p.descripcion  Aprende desde 0 todo lo que tienes que saber sobre el desarrollo web y crea tu propia página
+							a.btn(href="#") Ir al curso
+					.item
+						img(src="img/curso-02.jpg", alt="curso 02")
+						.hover
+							h3.curso Desarrollo Web Online
+							p.descripcion  Aprende desde 0 todo lo que tienes que saber sobre el desarrollo web y crea tu propia página
+							a.btn(href="#") Ir al curso
+					.item
+						img(src="img/curso-03.jpg", alt="curso 03")
+						.hover
+							h3.curso Desarrollo Web Online
+							p.descripcion  Aprende desde 0 todo lo que tienes que saber sobre el desarrollo web y crea tu propia página
+							a.btn(href="#") Ir al curso
+					.item
+						img(src="img/curso-04.jpg", alt="curso 04")
+						.hover
+							h3.curso Desarrollo Web Online
+							p.descripcion  Aprende desde 0 todo lo que tienes que saber sobre el desarrollo web y crea tu propia página
+							a.btn(href="#") Ir al curso
+					
+		// ------- Objetivos --------
+		section.objetivos.animacion
+			.margen
+				h2.title Objetivos Principales
+				.objetivo
+					span.numero 01
+					ul.menu
 						li.item
-							span.fas.fa-phone.icono
-							span.info 0424-1234567
+							a(href="#") 1
 						li.item
-							span.fas.fa-envelope.icono
-							span.info superaprendo@gmail.com
+							a(href="#") 2
 						li.item
-							span.fas.fa-map-marker-alt.icono
-							span.info Monagas Maturín Av Bolivar
-					ul.social
-						li.item
-							a(href="#")
-								span.fab.fa-facebook
-						li.item
-							a(href="#")
-								span.fab.fa-twitter
-						li.item
-							a(href="#")
-								span.fab.fa-instagram
-						li.item
-							a(href="#")
-								span.fab.fa-youtube
-	// ------- footer --------
-	footer.footer
-		.margen
-			ul.menu
-				li.item
-					a(href="#") Cursos
-				li.item
-					a(href="#") Profesores
-				li.item
-					a(href="#") Blog
-				li.item
-					a(href="#") Información
-				li.item
-					a(href="#") Donación
+							a(href="#") 3
+					.imagen
+						img(src="img/triste.png", alt="triste")
+					p.descripcion Queremos ayudar a los jóvenes que no pueden acceder a una educación por la diversas problemáticas ya sea, falta de transporte, inasistencia de profesores, y brindarles herramientas para su futuro.
+					.boton
+						a.btn(href="#") Ir a los cursos
+		// ------- Profesores --------
+		section.profesores.animacion
+			.margen
+				h2.title Conoce a tu profesores
+				.grid
+					.item
+						.header
+							.img
+								img.portada(src="img/portada-capitan.jpg", alt="portada capitan")
+							.perfil
+								img.foto(src="img/perfil-01.jpg", alt="profesor 01")
+						.body
+							h3.profesor Chris Evans
+							span.cargo Frontend Developer
+							a.btn(href="#") Ver perfil
+					.item
+						.header
+							.img
+								img.portada(src="img/portada-ironman.jpg", alt="portada ironman")
+							.perfil
+								img.foto(src="img/perfil-02.jpg", alt="profesor 02")
+						.body
+							h3.profesor Robert Dawney Jr.
+							span.cargo Frontend Developer
+							a.btn(href="#") Ver perfil
+					.item
+						.header
+							.img
+								img.portada(src="img/portada-scarlet.jpg", alt="portada scarlett")
+							.perfil
+								img.foto(src="img/perfil-03.jpg", alt="profesor 03")
+						.body
+							h3.profesor Scarlett Johansson
+							span.cargo Frontend Developer
+							a.btn(href="#") Ver perfil
+		// ------- Contacto --------
+		footer.contacto.animacion
+			.margen
+				.grid
+					.item
+						.triangulo
+						.titulo
+							h2.title Contactanos
+						form.formulario
+							input#nombre.input(type="text", name="nombre",placeholder="Nombre")
+							input#correo.input(type="email", name="correo", placeholder="Correo")
+							input#correo.input(type="text", name="Asunto", placeholder="Asunto")
+							textarea#mensae.textarea(name="mensaje", cols="30", rows="5",placeholder="Mensaje")
+							input(type="submit", value="Enviar").btn
+					.item
+						h2.title Más Información
+						p.descripcion  Ahora que conoces la plataforma, ¿cuéntanos que te pareció? También siéguenos en nuestras redes sociales donde encontraras tips, consejos para ser un gran profesional. Sigue formándote y se el mejor.
+						ul.datos
+							li.item
+								span.fas.fa-phone.icono
+								span.info 0424-1234567
+							li.item
+								span.fas.fa-envelope.icono
+								span.info superaprendo@gmail.com
+							li.item
+								span.fas.fa-map-marker-alt.icono
+								span.info Monagas Maturín Av Bolivar
+						ul.social
+							li.item
+								a(href="#")
+									span.fab.fa-facebook
+							li.item
+								a(href="#")
+									span.fab.fa-twitter
+							li.item
+								a(href="#")
+									span.fab.fa-instagram
+							li.item
+								a(href="#")
+									span.fab.fa-youtube
+		// ------- footer --------
+	script(src="js/css-scroll-snap-polyfill@0.1.2")
+	script.
+		cssScrollSnapPolyfill();
